@@ -13,7 +13,9 @@ android {
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
-
+        ndk {
+            abiFilters "armeabi-v7a","arm64-v8a"
+        }
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -39,7 +41,11 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'com.google.android.material:material:1.2.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
-    testImplementation 'junit:junit:4.+'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    implementation project(path: ':modile_aliplayer')
+
+    //阿里云播放器
+    implementation 'com.aliyun.sdk.android:AliyunPlayer:5.2.2-full'
+    implementation 'com.alivc.conan:AlivcConan:1.0.4'
+//    implementation 'org.fourthline.cling:cling-core:2.1.1'
+//    implementation 'org.fourthline.cling:cling-support:2.1.1'
 }
