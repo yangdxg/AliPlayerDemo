@@ -1,0 +1,3 @@
+include ':modile_aliplayer'
+include ':app'
+rootProject.name = "AliPlayerDemo"
